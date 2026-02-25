@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Homemade+Apple&family=Instrument+Serif:ital@0;1&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Crimson Text", serif;
+  --font-display: "Instrument Serif", serif;
+  --font-hand: "Homemade Apple", cursive;
+  
+  --color-paper: #f5f2ed;
+  --color-ink: #292524;
+  --color-sage-500: #84a98c;
+  --color-sage-700: #52796f;
+  --color-rose-400: #e5989b;
+  --color-rose-600: #b5838d;
+  
+  --animate-sway: sway 6s ease-in-out infinite;
+  --animate-grow: grow 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes grow {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-serif);
+  background-image: 
+    radial-gradient(#e5e5e5 1px, transparent 1px),
+    radial-gradient(#e5e5e5 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+.font-hand {
+  font-family: var(--font-hand);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6d3d1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a29e;
+}
